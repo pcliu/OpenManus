@@ -1,10 +1,20 @@
-# Global LLM configuration
 [llm]
-model = "claude-3-7-sonnet-20250219"        # The LLM model to use
-base_url = "https://api.anthropic.com/v1/"  # API endpoint URL
-api_key = "YOUR_API_KEY"                    # Your API key
-max_tokens = 8192                           # Maximum number of tokens in the response
-temperature = 0.0                           # Controls randomness
+model = "deepseek-r1-distill-qwen-14b"
+base_url = "http://127.0.0.1:1234/v1"
+api_key = "not-needed"           # 代理服务器不需要API密钥
+max_tokens = 4096                # 根据需要调整最大token数
+temperature = 0.0                # 控制随机性
+api_type = "openai"              # 使用OpenAI兼容API
+
+
+
+# Global LLM configuration
+# [llm]
+# model = "claude-3-7-sonnet-20250219"        # The LLM model to use
+# base_url = "https://api.anthropic.com/v1/"  # API endpoint URL
+# api_key = "YOUR_API_KEY"                    # Your API key
+# max_tokens = 8192                           # Maximum number of tokens in the response
+# temperature = 0.0                           # Controls randomness
 
 # [llm] # Amazon Bedrock
 # api_type = "aws"                                       # Required

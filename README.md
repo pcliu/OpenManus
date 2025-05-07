@@ -27,7 +27,7 @@ We're also excited to introduce [OpenManus-RL](https://github.com/OpenManus/Open
 
 ## Installation
 
-We provide two installation methods. Method 2 (using uv) is recommended for faster installation and better dependency management.
+We provide three installation methods. Method 2 (using uv) is recommended for faster installation and better dependency management.
 
 ### Method 1: Using conda
 
@@ -79,6 +79,36 @@ source .venv/bin/activate  # On Unix/macOS
 
 ```bash
 uv pip install -r requirements.txt
+```
+
+### Method 3: Using setup scripts
+
+We provide convenient setup scripts that automatically create a Python 3.12 virtual environment and install all dependencies:
+
+**On Unix/macOS:**
+
+```bash
+./setup_venv.sh
+```
+
+**On Windows:**
+
+```bash
+setup_venv.bat
+```
+
+After running the script, activate the virtual environment:
+
+**On Unix/macOS:**
+
+```bash
+source bin/activate
+```
+
+**On Windows:**
+
+```bash
+Scripts\activate.bat
 ```
 
 ### Browser Automation Tool (Optional)

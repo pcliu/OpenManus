@@ -429,8 +429,14 @@ class LLM:
                     **params, stream=False
                 )
 
-                if not response.choices or not response.choices[0].message.content:
-                    raise ValueError("Empty or invalid response from LLM")
+                if not response.choices:
+                    raise ValueError("Invalid response from LLM: no choices available")
+
+                # 处理空内容响应
+                if not response.choices[0].message.content:
+                    logger.warning("Received empty content from LLM, using default response")
+                    # 返回默认响应而不是抛出异常
+                    return "I'm having trouble generating a response. Let me try a different approach."
 
                 # Update token counts
                 self.update_token_count(

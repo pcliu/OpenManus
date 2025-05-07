@@ -28,7 +28,7 @@ Manus 非常棒，但 OpenManus 无需邀请码即可实现任何创意 🛫！
 
 ## 安装指南
 
-我们提供两种安装方式。推荐使用方式二（uv），因为它能提供更快的安装速度和更好的依赖管理。
+我们提供三种安装方式。推荐使用方式二（uv），因为它能提供更快的安装速度和更好的依赖管理。
 
 ### 方式一：使用 conda
 
@@ -80,6 +80,36 @@ source .venv/bin/activate  # Unix/macOS 系统
 
 ```bash
 uv pip install -r requirements.txt
+```
+
+### 方式三：使用安装脚本
+
+我们提供了便捷的安装脚本，可以自动创建 Python 3.12 虚拟环境并安装所有依赖：
+
+**Unix/macOS 系统：**
+
+```bash
+./setup_venv.sh
+```
+
+**Windows 系统：**
+
+```bash
+setup_venv.bat
+```
+
+运行脚本后，激活虚拟环境：
+
+**Unix/macOS 系统：**
+
+```bash
+source bin/activate
+```
+
+**Windows 系统：**
+
+```bash
+Scripts\activate.bat
 ```
 
 ### 浏览器自动化工具（可选）
