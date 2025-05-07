@@ -197,3 +197,19 @@ cython_debug/
 
 # OSX
 .DS_Store
+
+# 临时脚本和测试文件
+test_*.py
+tests/
+run_text_mcp.py
+
+# 虚拟环境和依赖
+bin/
+pyvenv.cfg
+setup_venv.bat
+setup_venv.sh
+
+# 生成或第三方内容
+include/
+share/
+index.html
